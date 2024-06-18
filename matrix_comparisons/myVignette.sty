@@ -1,7 +1,5 @@
-\RequirePackage{hyperref}
-\RequirePackage{url}
-\RequirePackage{amsmath}
-\RequirePackage{bm}%-> \bm (= bold math)
+\newcommand{\bm}[1]{\boldmath{#1}}
+% Redefine \bm as \boldmath
 \newcommand{\Slang}{\textsf{S} language}
 \newcommand{\RR}{\textsf{R}}
 \newcommand{\email}[1]{\href{mailto:#1}{\normalfont\texttt{#1}}}
@@ -10,9 +8,9 @@
 \def\@codex#1{{\normalfont\ttfamily\hyphenchar\font=-1 #1}\egroup}
 \let\env=\code
 \let\command=\code
-\newcommand*{\Rfun}[1]{\code{#1()}\index{\RR~function #1}}
-\newcommand*{\class}[1]{\code{#1}\index{class #1}}%
-\newcommand*{\pkg}[1]{\code{#1}\index{\RR~package #1}}
+\newcommand{\Rfun}[1]{\code{#1()}\index{\RR~function #1}}
+\newcommand{\class}[1]{\code{#1}\index{class #1}}%
+\newcommand{\pkg}[1]{\code{#1}\index{\RR~package #1}}
 %
 \newcommand{\kbd}[1]{{\normalfont\texttt{#1}}}
 \newcommand{\key}[1]{{\normalfont\texttt{\uppercase{#1}}}}
@@ -26,7 +24,7 @@
 \newcommand{\strong}[1]{{\normalfont\fontseries{b}\selectfont #1}}
 \let\pkg=\strong
 %
-\RequirePackage{alltt}
+
 \newenvironment{example}{\begin{alltt}}{\end{alltt}}
 \newenvironment{smallexample}{\begin{alltt}\small}{\end{alltt}}
 \newenvironment{display}{\list{}{}\item\relax}{\endlist}
@@ -77,3 +75,4 @@
 \newcommand{\btheta}{\ensuremath{\bm{\theta}}}
 \newcommand{\by}{\ensuremath{\bm{y}}}
 \newcommand{\bzer}{\ensuremath{\bm{0}}}
+
